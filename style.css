@@ -1,22 +1,90 @@
-/* 
+/*
 CLEARFIX
 http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
   License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -25,21 +93,34 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 body {
   line-height: 1;
 }
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: '';
   content: none;
 }
@@ -53,37 +134,67 @@ CUSTOM SYLES
 */
 
 body {
-  padding-top: 50px;
-  background-color: #70D1FE;
-  background-image: url();
-  font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 40px;
+  min-height: 100vh;
+  font: 300 16px/22px 'Lato', 'Open Sans', 'Helvetica Neue', Helvetica, Arial,
+    sans-serif;
+  background-color: #70d1fe;
+}
+
+.navbar.navbar-light {
+  background-color: #fed90f;
+  border-bottom: 2px solid #000;
+}
+
+.navbar-brand {
+  margin-left: 40px;
+  padding: 9px 0;
+}
+
+.navbar .dropdown-menu {
+  background-color: #fed90f;
+}
+
+main {
+  min-height: calc(100vh - 98px);
 }
 
 .container {
   margin: auto;
+  margin-top: 40px;
   text-align: center;
   max-width: 720px;
+  min-width: 375px;
+}
+
+.container img {
+  max-width: 100%;
+  min-width: 375px;
 }
 
 .logo {
   font-family: 'Gloria Hallelujah';
-  font-size: 60px;
+  font-size: clamp(25px, 10vw, 60px);
+  line-height: 1.2;
   padding: 20px 20px;
   color: #ef2d30;
-  text-shadow: -5px 3px 0px black, -1.5px 1.5px 0px black, -1.5px -1.5px 0px black, 1.5px -1.5px 0px black, 1.5px -0px 0px black, -3px 3px 0px black, 0px 3px 0px black, -1.5px 3px 0px black, 0px -1.5px 0px black, -2.5px 1px 0px black;
+  text-shadow: -5px 3px 0px black, -1.5px 1.5px 0px black,
+    -1.5px -1.5px 0px black, 1.5px -1.5px 0px black, 1.5px -0px 0px black,
+    -3px 3px 0px black, 0px 3px 0px black, -1.5px 3px 0px black,
+    0px -1.5px 0px black, -2.5px 1px 0px black;
 }
 
 #quote-box {
-  background-color: #FFF;
+  background-color: #fff;
   border: 2px solid;
   box-shadow: -5px 5px #000;
-  font-size: 36px;
+  font-size: clamp(14px, 5vw, 36px);
+  line-height: 1.2;
   margin: auto;
   padding: 50px 50px 20px 50px;
   border-radius: 10px;
   max-width: 720px;
-  background-color: #FED90F;
+  min-width: 375px;
+  background-color: #fed90f;
 }
 
 #author {
@@ -92,23 +203,23 @@ body {
   text-align: right;
 }
 
-.tweet, .new-quote {
+.tweet,
+.new-quote {
   display: inline-block;
   cursor: pointer;
-  font-size: 24px;
+  font-size: clamp(14px, 5vw, 24px);
   color: #000;
+  padding: 5px 10px;
   border-radius: 5px;
   border: 2px solid #000;
-  background-color: #70D1FE;
+  background-color: #70d1fe;
 }
 
 .tweet {
-  padding: 5px 10px;
-  font-size: 30px;
   float: right;
 }
 
-.footer{
+.footer {
   font-size: 15px;
   padding: 20px 0px 0px 0px;
 }
